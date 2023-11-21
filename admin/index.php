@@ -3,6 +3,7 @@
     include 'sidebar.php'; 
     include 'nav.php'; 
     include_once '../model/danhmuc.php';
+    include_once '../model/product.php';
     if(isset($_GET['action'])){
         $url = $_GET['action'];
         switch($url){
@@ -50,6 +51,67 @@
                     delete_productbyIdbrand($_GET['id_brand']);
                     delete_brand($_GET['id_brand']);
                     echo "<script>alert('Đã xóa thành công!');window.location='index.php?action=danhmuc'</script>";
+                }
+                break;
+            case 'sanpham':
+                $pro = getAllproduct();
+                renderAD('san_pham/list',['listpro'=>$pro]);
+                break;
+            case 'createproduct':
+                if (isset($_POST['btn_add_pro'])) {
+                    $pro_name = $_POST['pro_name'];
+                    $images = $_FILES['img']['name'];
+                    move_uploaded_file($_FILES['img']['tmp_name'], '../img/product/' . $images);
+                    $price = $_POST['price'];
+                    $brand = $_POST['brand'];
+                    $des = $_POST['des'];
+                    $detail = $_POST['detail'];
+                    $create_date = date('Y-m-d');
+                    $quantity = $_POST['quantity'];
+                    try {
+                        create_product($pro_name, $images, $des, $detail, $create_date, $quantity, $price, $brand);
+                        echo "<script>alert('Đã thêm thành công!');window.location='index.php?action=sanpham'</script>";
+                    } catch (\Throwable $th) {
+                        echo "<script>alert('Thêm thất bại!')</script>";
+                    }
+                }
+                renderAD('san_pham/add_sp');
+                break;
+            case 'edit_product':
+                if(isset($_GET['id_pro'])&& ($_GET['id_pro'])){
+                    $pro = getProductId($_GET['id_pro']);
+                    renderAD('san_pham/update_sp',['pro'=>$pro]);
+                }
+                break;
+            case 'updateproduct':
+                if (isset($_POST['btn_update_pro'])) {
+                    $product_id = $_POST['id_pro'];
+                    $pro_name = $_POST['pro_name'];
+                    if ($_FILES['img']['size'] == 0) {
+                        $img = getProductId($_POST['id_pro'])['image'];
+                    } else {
+                        $img = $_FILES['img']['name'];
+                        move_uploaded_file($_FILES['img']['tmp_name'], '../public/img/product/' . $img);
+                    }
+                    $price = $_POST['price'];
+                    $brand = $_POST['brand'];
+                    $des = $_POST['des'];
+                    $detail = $_POST['detail'];
+                    date_default_timezone_set('Asia/Ho_Chi_Minh');
+                    $update_date = date('Y-m-d');
+                    $quantity = $_POST['quantity'];
+                    try {
+                        update_product($pro_name, $img, $des, $detail, $update_date, $quantity, $price, $brand, $product_id);
+                        echo "<script>alert('Đã sửa thành công!');window.location='index.php?action=sanpham'</script>";
+                    } catch (\Throwable $th) {
+                        echo "<script>alert('Sửa thất bại!');</script>";
+                    }
+                }
+                break;
+            case 'deleteproduct';
+                if (isset($_GET['id_pro']) && $_GET['id_pro']) {
+                    hide_product_by_id($_GET['id_pro']);
+                    echo "<script>alert('Đã xóa thành công!');window.location='index.php?action=sanpham'</script>";
                 }
                 break;
         }
