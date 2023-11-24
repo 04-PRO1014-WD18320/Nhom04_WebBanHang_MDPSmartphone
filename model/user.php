@@ -51,4 +51,10 @@ function user_check($user){
     $sql ="select count(*) from user where user_name = ? ";
     return pdo_query_value($sql,$user);
 }
+function renderUS($path,$data = [])
+{
+    extract($data);
+    $view = "../users/".$path.".php";
+    include_once $view;
+}
 ?>
