@@ -4,7 +4,7 @@
         <div class="container">
             <div class="banner_content row">
                 <div class="col-lg-12">
-                    <p class="sub text-uppercase">Zipphone</p>
+                    <p class="sub text-uppercase">MDPsmartphone</p>
                     <h3> <span>Iphone </span> chính hãng<br />Bảo hành <span>trọn đời</span></h3>
                     <h4>Giảm đến 1 triệu đồng cho khách hàng thanh toán lần đầu.</h4>
                 </div>
