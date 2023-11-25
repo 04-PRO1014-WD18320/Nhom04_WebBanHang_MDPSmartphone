@@ -4,10 +4,10 @@
     include_once '../users/header.php';
     require_once '../model/user.php';
     require_once '../model/danhmuc.php';
-    // require_once '../model/cart.php';
+    require_once '../model/cart.php';
     // require_once '../model/comment.php';
     require_once '../model/product.php';
-    // require_once '../admin/controller/controller.php';
+    require_once '../admin/controller/controller.php';
     if(isset($_GET['action'])&& ($_GET['action']!='')){
         $act = $_GET['action'];
         switch($act){
@@ -238,24 +238,24 @@
                  
                 renderUS('sanpham/sanphamct',['product'=>$product]);
                 break;
-            case 'comment':
-                if (isset($_SESSION['user'])) {
-                    if (isset($_POST['btn_gui'])) {
-                        $noi_dung = $_POST['note'];
-                        $ngay_bl = date_format(date_create(), "Y/m/d");
-                        $ma_kh = $_SESSION['user']['user_id'];
-                        $ma_hh = $_POST['id_product'];
-                        try {
-                            comment_insert($noi_dung, $ngay_bl, $ma_hh, $ma_kh);
-                            header('location: index.php?action=chitietsp&id_product='.$ma_hh) ;
-                        } catch (\Throwable $th) {
-                            echo '<script>alert("haxx");</script>';    
-                        }
-                    }
-                } else {
-                    echo '<script>alert("Đăng nhập để tiếp tục");window.location="login.php";</script>';    
-                }
-                break;
+            // case 'comment':
+            //     if (isset($_SESSION['user'])) {
+            //         if (isset($_POST['btn_gui'])) {
+            //             $noi_dung = $_POST['note'];
+            //             $ngay_bl = date_format(date_create(), "Y/m/d");
+            //             $ma_kh = $_SESSION['user']['user_id'];
+            //             $ma_hh = $_POST['id_product'];
+            //             try {
+            //                 comment_insert($noi_dung, $ngay_bl, $ma_hh, $ma_kh);
+            //                 header('location: index.php?action=chitietsp&id_product='.$ma_hh) ;
+            //             } catch (\Throwable $th) {
+            //                 echo '<script>alert("haxx");</script>';    
+            //             }
+            //         }
+            //     } else {
+            //         echo '<script>alert("Đăng nhập để tiếp tục");window.location="login.php";</script>';    
+            //     }
+            //     break;
             case 'gioithieu':
                 include_once '../users/gioithieu.php';
                 break;
