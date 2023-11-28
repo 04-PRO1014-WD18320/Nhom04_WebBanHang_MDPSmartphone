@@ -4,6 +4,8 @@
     include 'nav.php'; 
     include_once '../model/danhmuc.php';
     include_once '../model/product.php';
+    include_once '../model/comment.php';
+    include_once 'controller/controller.php';
     if(isset($_GET['action'])){
         $url = $_GET['action'];
         switch($url){
