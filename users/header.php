@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" href="../img/logo.jpg" type="image/png" />
-    <title>Zipphone</title>
+    <title>MDPsmartphone</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/themify-icons.css">
@@ -341,7 +341,7 @@
                     <div class="col-lg-5">
                         <div class="float-left">
                             <p>Phone: +84 374659924</p>
-                            <p>email: zipphonemobile@gmail.com</p>
+                            <p>email: MDPsmartphone@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-lg-7">
