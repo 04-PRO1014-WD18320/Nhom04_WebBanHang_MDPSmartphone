@@ -24,5 +24,11 @@
         $sql = "select c.*,p.product_name from comment c join product p on p.product_id=c.product_id where c.product_id = ? order by datetime desc";
         return pdo_query($sql,$product_id);
     }
+    function tk_binh_luan()
+    {
+        $sql = "select hh.product_id,hh.product_name,count(*)so_luong,min(bl.datetime)cu_nhat,max(bl.datetime)moi_nhat
+                    from comment bl join product hh on hh.product_id=bl.product_id group by hh.product_id, hh.product_name having so_luong>0";
+        return pdo_query($sql);
+    }
 
 ?>

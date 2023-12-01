@@ -25,7 +25,7 @@
              <table>
                  <thead>
                      <tr>
-                         <th>Id</th>
+                         <th>Mã</th>
                          <th>Tên Sản Phẩm</th>
                          <th>Ảnh</th>
                          <th>Giá Tiền</th>

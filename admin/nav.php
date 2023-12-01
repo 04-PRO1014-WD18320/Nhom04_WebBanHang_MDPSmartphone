@@ -13,6 +13,6 @@
             <span class="num">8</span>
         </a>
         <a href="#" class="profile">
-            <img src="../images_giao_dien/people.png">
+            <img src="../images_giao_dien/people.jpg">
         </a>
     </nav>
