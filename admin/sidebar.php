@@ -1,7 +1,7 @@
 <!-- SIDEBAR -->
 <section id="sidebar">
 	<a href="#" class="brand">
-		<img id="logo" src="../images_giao_dien/logo.jpg" alt="">
+		<img id="logo" src="../images_giao_dien/logo.png" alt="">
 		<span class="text">Admin</span>
 	</a>
 	<ul class="side-menu top">
@@ -18,37 +18,37 @@
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="index.php?url=admin&action=donhang">
 				<i class='bx bxs-shopping-bag-alt'></i>
 				<span class="text">Quản Lý Đơn Hàng</span>
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="index.php?action=user">
 				<i class='bx bxs-group'></i>
 				<span class="text">Quản Lý User</span>
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="index.php?action=comment">
 				<i class='bx bxs-message-dots'></i>
 				<span class="text">Bình Luận</span>
 			</a>
 		</li>
-		<li>
+		<!-- <li>
 			<a href="#">
 				<i class='bx bxs-doughnut-chart'></i>
 				<span class="text">Thống Kê</span>
 			</a>
-		</li>
+		</li> -->
 	</ul>
 	<ul class="side-menu">
-		<li>
+		<!-- <li>
 			<a href="#">
 				<i class='bx bxs-cog'></i>
 				<span class="text">Settings</span>
 			</a>
-		</li>
+		</li> -->
 		<li>
 			<a href="../users/" class="logout">
 				<i class='bx bxs-log-out-circle'></i>

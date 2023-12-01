@@ -13,14 +13,14 @@ if (isset($_SESSION['mes'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="../css/dangnhap.css">
-    <link rel="icon" type="image/x-icon" href="../images_giao_dien/logo.jpg">
+    <link rel="icon" type="image/x-icon" href="../images_giao_dien/logo.png">
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 
 <body>
     <section class="d-flex">
         <div class="img-bg">
-            <img src="../img/sign.jpg" alt="Hình Ảnh Minh Họa">
+            <img src="../images_giao_dien/sign.jpg" alt="Hình Ảnh Minh Họa">
         </div>
         <div class="noi-dung">
             <div class="form">
