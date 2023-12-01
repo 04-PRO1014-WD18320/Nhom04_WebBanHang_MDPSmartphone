@@ -20,7 +20,7 @@ if (isset($_SESSION['mes'])) {
 <body>
     <section class="d-flex">
         <div class="img-bg">
-            <img src="../img/sign.jpg" alt="Hình Ảnh Minh Họa">
+            <img src="../images_giao_dien/sign.jpg" alt="Hình Ảnh Minh Họa">
         </div>
         <div class="noi-dung">
             <div class="form">
