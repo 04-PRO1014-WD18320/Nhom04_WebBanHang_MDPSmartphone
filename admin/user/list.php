@@ -45,7 +45,7 @@
                             <td>
                                 <?= $user_name ?>
                             </td>
-                            <td><img src="../public/img/user/<?= $image ?>" alt=""></td>
+                            <td><img src="../img/user/<?= $image ?>" alt=""></td>
                             <td>
                                 <?= $email ?>
                             </td>

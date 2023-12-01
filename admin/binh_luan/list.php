@@ -22,7 +22,6 @@
             </div>
             <table>
                 <thead>
-                    <tr>
                         <th>Tên Sản Phẩm</th>
                         <th>Số lượng</th>
                         <th>Mới nhất</th>

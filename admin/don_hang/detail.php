@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="table-content table-responsive mt-3 mb-3">
+        <!-- <div class="table-content table-responsive mt-3 mb-3">
             <table class="table">
                 <thead>
                     <tr>
@@ -85,7 +85,7 @@
                     <?php } ?>
                 </tbody>
             </table>
-        </div>
+        </div> -->
         <div class="btn-function">
             <a href="index.php?action=donhang" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Quay lại
                 danh sách</a>

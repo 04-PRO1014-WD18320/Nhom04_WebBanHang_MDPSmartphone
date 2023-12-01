@@ -5,29 +5,21 @@
             <div class="col-lg-3 col-md-6 single-footer-widget">
                 <h4>Tổng đài hỗ trợ miễn phí</h4>
                 <ul>
-                    <li><a href="#">Gọi mua hàng 1800.2097 (7h30 - 22h00)</a></li>
-                    <li><a href="#">Gọi khiếu nại 1800.2063 (8h00 - 21h30)</a></li>
-                    <li><a href="#">Gọi bảo hành 1800.2064 (8h00 - 21h00)</a></li>
+                    <li><a href="#">Gọi mua hàng 1800.2097</a></li>
+                    <li><a href="#">Gọi bảo hành 1800.2064</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 single-footer-widget">
                 <h4>Thông tin và chính sách</h4>
                 <ul>
-                    <li><a href="#">Thông tin và chính sách</a></li>
                     <li><a href="#">Mua hàng trả góp Online</a></li>
                     <li><a href="#">Tra thông tin đơn hàng</a></li>
-                    <li><a href="#">Trung tâm bảo hành chính hãng</a></li>
-                    <li><a href="#">Quy định về việc sao lưu dữ liệu</a></li>
-                    <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
-                    <li><a href="#">Dịch vụ bảo hành mở rộng</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 col-md-6 single-footer-widget">
                 <h4>Dịch vụ và thông tin khác</h4>
                 <ul>
                     <li><a href="#">Dịch vụ và thông tin khác</a></li>
-                    <li><a href="#">Quy chế hoạt động</a></li>
-                    <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
                     <li><a href="#">Tuyển dụng</a></li>
                 </ul>
             </div>
@@ -49,7 +41,7 @@
         </div>
         <div class="footer-bottom row align-items-center">
             <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Địa chỉ: 128 Trần Quang Khải, P. Tân Định, TP. Hà Nội
+                Địa chỉ: Cao đẳng FPT, Trịnh Văn Bô, Nam Từ Liêm, TP. Hà Nội
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             <div class="col-lg-4 col-md-12 footer-social">

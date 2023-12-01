@@ -61,7 +61,7 @@
                     </div>
                 </form>
             </div>
-            <div class="card-header py-3">
+            <!-- <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Sản phẩm</h6>
             </div>
             <div class="table-content table-responsive">
@@ -83,7 +83,7 @@
                             extract($product)
                         ?>
                             <tr>
-                                <td class="jb-product-thumbnail"><img src="../public/img/product/<?= getProductId($product_id)['image'] ?>" alt="Ultraphone Product" width="80px"></img></td>
+                                <td class="jb-product-thumbnail"><img src="../img/product/<?= getProductId($product_id)['image'] ?>" alt="Ultraphone Product" width="80px"></img></td>
                                 <td class="jb-product-name"><a href=""><?= getProductId($product_id)['product_name'] ?></a></td>
                                 <td class="jb-product-price"><span class="amount"><?= number_format(getProductId($product_id)['price']) ?> ₫</span></td>
                                 <td class="quantity"><?= $quantity ?></td>
@@ -92,7 +92,7 @@
                         <?php } ?>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
