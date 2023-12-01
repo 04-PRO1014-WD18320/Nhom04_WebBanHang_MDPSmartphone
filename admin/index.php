@@ -5,6 +5,8 @@
     include_once '../model/danhmuc.php';
     include_once '../model/product.php';
     include_once '../model/comment.php';
+    include_once '../model/cart.php';
+    include_once '../model/user.php';
     include_once 'controller/controller.php';
     if(isset($_GET['action'])){
         $url = $_GET['action'];
@@ -114,6 +116,106 @@
                 if (isset($_GET['id_pro']) && $_GET['id_pro']) {
                     hide_product_by_id($_GET['id_pro']);
                     echo "<script>alert('Đã xóa thành công!');window.location='index.php?action=sanpham'</script>";
+                }
+                break;
+            case 'user':
+                $user = getalluser();
+                renderAD('user/list',['user'=>$user]);
+                break;
+            case 'add_user';
+                if(isset($_POST['btn_add_user'])){
+                    $user_name = $_POST['user_name'];
+                    if($_FILES['img']['size'] == 0){
+                        $img = 'user.png';
+                    }
+                    else{
+                        $img = $_FILES['img']['name'];;
+                        move_uploaded_file($_FILES['img']['tmp_name'],'../public/img/user/'.$img);
+                    }
+                    $email = $_POST['email'];
+                    $pass = $_POST['password'];
+                    $phone = $_POST['phone'];
+                    $add = $_POST['address'];
+                    $role = $_POST['role'];
+                    try {
+                        user_insert($user_name,$img,$email,$phone,$add,$pass,$role);
+                        echo "<script>alert('Đã thêm thành công!');window.location='index.php?action=user'</script>";
+                    } catch (\Throwable $th) {
+                        echo "<script>alert('Thất bại!')</script>";
+                    }
+                }
+                renderAD('user/add_user');
+                break;
+            case 'edit_user':
+                if(isset($_GET['id_user'])){
+                    $user = get_user_by_id($_GET['id_user']);
+                    renderAD('user/update_user',['user'=>$user]);
+                }
+                break;
+            case 'update_user':
+                if(isset($_POST['btn_update_user'])){
+                    $id_user = $_POST['id_user'];
+                    $user_name =$_POST['user_name'];
+                    $pass = $_POST['password'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    $add = $_POST['address'];
+                    $role = $_POST['role'];
+                    if($_FILES['img']['size'] == 0){
+                        $img = get_user_by_id($id_user)['image'];
+                    }
+                    else{
+                        $img = $_FILES['img']['name'];
+                    move_uploaded_file($_FILES['img']['tmp_name'],'../public/img/user/'.$img);
+                    }
+                    user_update($user_name,$img,$email,$phone,$add,$pass,$role,$id_user);
+                    echo "<script>alert('Đã sửa thành công!');window.location='index.php?action=user'</script>";
+                }
+                break;
+            case 'delete_user':
+                if(isset($_GET['id_user'])){
+                    user_delete($_GET['id_user']);
+                    echo "<script>alert('Đã xóa thành công!');window.location='index.php?action=user'</script>";
+                }
+                break;
+            case 'comment':
+                $cmt = tk_binh_luan();
+                renderAD('binh_luan/list',['list_cmt'=>$cmt]);
+                break;
+            case 'detail_comment';
+                if(isset($_GET['id_product'])){
+                    $list_cm_pro = comment_select_by_product($_GET['id_product']);
+                    renderAD('binh_luan/detail',['list_cm'=>$list_cm_pro]);
+                }
+                break;
+            case 'deleteBL':
+                if(isset($_GET['id_comment'])){
+                    comment_delete_by_comment_id($_GET['id_comment']);
+                    header('location: index.php?action=comment');
+                }
+                break;
+            case 'donhang':
+                $cart = get_all_cart();
+                renderAD('don_hang/list',['list_cart' => $cart]);
+                break;
+            case 'edit_cart':
+                if(isset($_GET['id_cart'])){
+                    $cart = get_cart_by_id($_GET['id_cart']);
+                    renderAD('don_hang/update_cart',['cart'=>$cart]);
+                }
+                break;
+            case 'update_cart':
+                if(isset($_POST['btn_update'])){
+                    $role = $_POST['status'];
+                    $cart_id = $_POST['cart_id'];
+                    update_cart($role,$cart_id);
+                    echo "<script>alert('Cập nhật thành công!');window.location='index.php?action=donhang'</script>";
+                }
+                break;
+            case 'detail_cart':
+                if(isset($_GET['id_cart'])){
+                    $cart = get_cart_by_id($_GET['id_cart']);
+                    renderAD('don_hang/detail',['cart'=>$cart]);
                 }
                 break;
         }
