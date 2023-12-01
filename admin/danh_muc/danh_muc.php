@@ -15,7 +15,7 @@
 			<span class="num">8</span>
 		</a>
 		<a href="#" class="profile">
-			<img src="public/images/people.png">
+			<img src="public/images/people.jpg">
 		</a>
 	</nav>
 	<!-- NAVBAR -->
