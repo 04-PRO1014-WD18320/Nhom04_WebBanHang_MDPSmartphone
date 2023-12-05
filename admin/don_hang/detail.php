@@ -87,7 +87,6 @@
             </table>
         </div> -->
         <div class="btn-function">
-            <a href="index.php?action=donhang" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Quay lại
-                danh sách</a>
+            <a href="index.php?action=donhang" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Quay lại danh sách</a>
         </div>
     </div>
