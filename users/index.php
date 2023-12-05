@@ -7,7 +7,6 @@
     require_once '../model/cart.php';
     require_once '../model/comment.php';
     require_once '../model/product.php';
-    require_once '../admin/controller/controller.php';
     if(isset($_GET['action'])&& ($_GET['action']!='')){
         $act = $_GET['action'];
         switch($act){

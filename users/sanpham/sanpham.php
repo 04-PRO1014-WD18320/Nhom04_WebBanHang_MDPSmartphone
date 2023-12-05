@@ -44,8 +44,8 @@
                                             <h4><?=$product_name?></h4>
                                         </a>
                                         <div class="mt-3">
-                                            <span class="mr-4"><?= number_format($price, 0, ',', '.')?></span>
-                                            <del>$35.00</del>
+                                            <span class="mr-4"><?= number_format($price, 0, ',', '.')?>đ</span>
+                                            <del>20.000.000đ</del>
                                         </div>
                                     </div>
                                 </div>
@@ -56,56 +56,3 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="col-lg-3">
-                <div class="left_sidebar_area">
-                    <aside class="left_widgets p_filter_widgets">
-                        <div class="l_w_title">
-                            <h3>Hãng</h3>
-                        </div>
-                        <div class="widgets_inner">
-                            <ul class="list">
-                                <li>
-                                    <a href="#">Iphone</a>
-                                </li>
-                                <li>
-                                    <a href="#">Samsung</a>
-                                </li>
-                                <li>
-                                    <a href="#">Oppo</a>
-                                </li>
-                                <li>
-                                    <a href="#">Xiaomi</a>
-                                </li>
-                                <li>
-                                    <a href="#">Vivo</a>
-                                </li>
-                                <li>
-                                    <a href="#">Nokia</a>
-                                </li>
-                                <li>
-                                    <a href="#">Realme</a>
-                                </li>
-                                <li>
-                                    <form class="form-inline">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-sm" placeholder="Search">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-success btn-sm" type="button">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                    </aside>
-
-
-                </div>
-            </div> -->
-        <!-- </div>
-    </div>
-</section> -->
-<!--================End Category Product Area =================-->

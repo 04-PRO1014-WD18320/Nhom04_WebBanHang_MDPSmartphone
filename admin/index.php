@@ -7,7 +7,6 @@
     include_once '../model/comment.php';
     include_once '../model/cart.php';
     include_once '../model/user.php';
-    include_once 'controller/controller.php';
     if(isset($_GET['action'])){
         $url = $_GET['action'];
         switch($url){
