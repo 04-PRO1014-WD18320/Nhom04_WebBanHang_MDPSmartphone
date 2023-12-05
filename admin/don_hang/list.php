@@ -71,7 +71,7 @@
                                     </span></td>
                                 <td>
                                     <a href="index.php?action=edit_cart&id_cart=<?= $cart_id ?>" class="btn-sm btn btn-success">Sửa</a>
-                                    <a href="index.php?action=detail_cart&id_cart=<?= $cart_id ?>" class="btn btn-sm btn-danger">Chi tiết</a>
+                                    <!-- <a href="index.php?action=detail_cart&id_cart=<?= $cart_id ?>" class="btn btn-sm btn-danger">Chi tiết</a> -->
                                 </td>
                             </tr>
                     <?php

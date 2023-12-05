@@ -115,7 +115,7 @@
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector1" required/>
                                 <label for="f-option4">Tôi đã đọc và chấp nhận về</label>
-                                <a href="#"> điều khoản & điều kiện</a><label for="f-option4">của Zipphone</label>
+                                <a href="#"> điều khoản & điều kiện</a><label for="f-option4">của MDPsmartphone</label>
                             </div>
                             <input type="submit" value="Đặt hàng" class="main_btn" style="width: 100%;" name="btn_thanhtoan">
                         </div>
